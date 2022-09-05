@@ -14,7 +14,7 @@
   <div class="container-fluid d-flex justify-content-end">
     <div class="navbar-nav">
       <% if Current.user%>
-        <span class="my-auto me-4"  ><%= Current.user.email%></span>
+       <%= link_to Current.user.email, edit_password_path, class:"nav-link"%>
         <%= button_to "Log out", logout_path, method: :delete, class:"btn btn-outline-warning" %>
       <% else %>
         <%= link_to "Sign up", sign_up_path, class:"nav-link" %>
