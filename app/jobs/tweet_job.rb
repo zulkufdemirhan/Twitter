@@ -3,7 +3,7 @@ class TweetJob < ApplicationJob
 
   def perform(tweet)
     return if tweet.published?
-    # Set timezone for your location.
+    # Set timezone for your location. add t.timestamps in migrations files.
     return if tweet.publish_at > Time.current
     
 
