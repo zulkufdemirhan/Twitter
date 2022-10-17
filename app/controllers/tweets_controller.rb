@@ -4,8 +4,6 @@ class TweetsController < ApplicationController
 
   def index
     @tweets = Current.user.tweets
-    #Takip ve takipçi özelliğini ekle.
-    #Takipten çıkanları ekrana yazdır.
   end
 
   def new
